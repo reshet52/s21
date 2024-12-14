@@ -5,3 +5,5 @@ s21_strlen.o: s21_strlen.c
 	$(CC) s21_strlen.c -c
 clean:
 	rm *.o
+unit_tests: 
+	gcc -o tests s21_unit_tests.c s21_memchr.c s21_strlen.c $(pkg-config --cflags --libs check)
